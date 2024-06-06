@@ -8,14 +8,14 @@ function App() {
 useEffect(()=>{
   let interval;
   if(running){
-    interval=setInterval(()=>setTime(time+1),10)
+    interval=setInterval(()=>setTime(time+1),1000)
   }
   return ()=>clearInterval(interval)
 },[running,time])
 
-const minutes = Math.floor((time % 360000) / 6000);
+const minutes = Math.floor((time /60) );
 
-const seconds = Math.floor((time % 6000) / 100);
+const seconds = Math.floor((time %60) );
   const handlerun=()=>{
     setRunning(!running)
 
