@@ -27,7 +27,7 @@ const seconds = Math.floor((time %60) );
   return (
     <div className="App">
      <h1>Stopwatch</h1>
-     <p><span>Time: </span><span>{minutes.toString().padStart(1,"0")+":"+seconds.toString().padStart(2,'0')}</span></p>
+     <p>{'Time:'+ minutes.toString().padStart(1,"0")+":"+seconds.toString().padStart(2,'0')}</p>
      <button type="button" onClick={handlerun}>{running?'Stop':'Start'}</button>
      <button onClick={resettime}>Reset</button>
     </div>
